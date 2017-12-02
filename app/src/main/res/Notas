@@ -1,0 +1,4 @@
+Añadir esto en el onCreate de la activity para usar la fuente:
+
+Typeface face=Typeface.createFromAsset(getAssets(),"Fonts/eurof55.ttf");
+txtV.setTypeface(face);
