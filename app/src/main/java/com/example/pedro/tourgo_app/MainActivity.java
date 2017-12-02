@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toolbar;
+import android.support.v7.app.ActionBar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,9 +13,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.mipmap.ic_launcher_round);
 
         TextView tv = findViewById(R.id.tv);
-        Typeface face=Typeface.createFromAsset(getAssets(),"Fonts/eurof55.ttf");
+        Typeface face=Typeface.createFromAsset(getAssets(),"fonts/eurof55.ttf");
         tv.setTypeface(face);
     }
 }
